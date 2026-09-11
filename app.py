@@ -61,7 +61,7 @@ def get_account_credentials(region: str) -> str:
     if r == "IND":
         return "uid={add_uid}&password={add_password}"
     elif r == "ME":
-        return "uid={add_uid}&password={add_password}"
+        return "uid=7226657327&password=RIYAD_LEGACY_zB70LGryevNU"
     elif r in {"BR", "US", "SAC", "NA"}:
         return "uid={add_uid}&password={add_password}"
     else:
