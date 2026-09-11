@@ -20,7 +20,7 @@ from datetime import datetime, timezone, timedelta
 
 # === Settings ===
 
-API_KEY = "MNSTR"
+API_KEY = "RAH"
 MAIN_KEY = base64.b64decode('WWcmdGMlREV1aDYlWmNeOA==')
 MAIN_IV = base64.b64decode('Nm95WkRyMjJFM3ljaGpNJQ==')
 RELEASEVERSION = "OB54"
@@ -372,7 +372,7 @@ def require_api_key(f):
         if not api_key or api_key != API_KEY:
             return jsonify({
                 "error": "Invalid or missing API key. Please provide api_key parameter or X-API-Key header.",
-                "example": "/info?uid=123&api_key=MNSTR"
+                "example": "/info?uid=123&api_key=RAH"
             }), 401
         return f(*args, **kwargs)
     return decorated_function
