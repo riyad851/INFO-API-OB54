@@ -63,9 +63,9 @@ def get_account_credentials(region: str) -> str:
     elif r == "ME":
         return "uid=7526816990&password=507D3250C779A4E73A74B66998E99DD4ED95A6133A07151FC0411A225C405ADD"
     elif r in {"BR", "US", "SAC", "NA"}:
-        return "uid=7526878411&password=470EDA07D316E6411D1A06B47D9500028B07F71754ECD4F0A107893A05B7A907"
+        return "uid=7526816990&password=507D3250C779A4E73A74B66998E99DD4ED95A6133A07151FC0411A225C405ADD"
     else:
-        return "uid=4565585280&password=470EDA07D316E6411D1A06B47D9500028B07F71754ECD4F0A107893A05B7A907"
+        return "uid=7526816990&password=507D3250C779A4E73A74B66998E99DD4ED95A6133A07151FC0411A225C405ADD"
 
 # === Token Generation ===
 
@@ -372,7 +372,7 @@ def require_api_key(f):
         if not api_key or api_key != API_KEY:
             return jsonify({
                 "error": "Invalid or missing API key. Please provide api_key parameter or X-API-Key header.",
-                "example": "/info?uid=123&api_key=RAH"
+                "example": "/info?uid=123&api_key=MNSTR"
             }), 401
         return f(*args, **kwargs)
     return decorated_function
