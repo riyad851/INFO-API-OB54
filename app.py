@@ -1,6 +1,4 @@
-# INFO API SRC BY: @MINISTER_69
-# CHANNEL: @MINISTER_6T9
-# LIKE GROUP: @MINISTER_LIKES
+
 import asyncio
 import time
 import httpx
